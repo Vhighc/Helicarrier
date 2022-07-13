@@ -30,7 +30,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
-### `nodemon app`
+### `nodemon index`
 
 Runs the database in the sever mode. => \cd server.
 Open [http://localhost:4949](http://localhost:4949/graphiql) to view it in your browser.

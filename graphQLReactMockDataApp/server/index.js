@@ -1,4 +1,4 @@
-const PORT = 6000;
+const PORT = 4949;
 const express = require("express");
 const useData = require('./MOCK_DATA.json');
 const graphql = require("graphql");
@@ -9,15 +9,6 @@ var cors = require('cors')
 // const schema = require('D:\graphql\server\Schemas\index');
 // const schema = require [ 'D:\\graphql\\server\\index.js' ];
 
-var dates = [
-    {
-        id: "1", date: "11-07-2022", 
-        id: "2", date: "11-07-2022",
-        id: "3", date: "11-07-2022",
-        id: "4", date: "11-07-2022",
-        id: "5", date: "11-07-2022",
-    }
-]
 
 const DateType = new GraphQLObjectType({
     name: "Date",
@@ -51,7 +42,7 @@ const RootQuery = new GraphQLObjectType({
                 return useData;
             },
     },
- 
+
   },
 });
 
@@ -97,5 +88,5 @@ app.use('/graphql', graphqlHTTP({
 
 
 app.listen (PORT, () =>{
-    console.log('now listening to requests on port 6000');
+    console.log('now listening to requests on port 4949');
 });

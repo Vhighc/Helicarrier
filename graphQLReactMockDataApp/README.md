@@ -14,7 +14,7 @@ Futhermore, i exported the endpoints a schema file.
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/Vhighc/graphQLReactMockDataApp.git).
+This project was bootstrapped with [Create React App](https://github.com/Vhighc/Helicarrier.git).
 
 ## Available Scripts
 

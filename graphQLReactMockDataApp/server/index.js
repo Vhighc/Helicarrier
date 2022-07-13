@@ -1,4 +1,4 @@
-const PORT = 4949;
+const PORT = 6000;
 const express = require("express");
 const useData = require('./MOCK_DATA.json');
 const graphql = require("graphql");
@@ -18,18 +18,7 @@ var dates = [
         id: "5", date: "11-07-2022",
     }
 ]
-// const RootQuery = new GraphQLObjectType({
-//     name: "RootQueryType",
-//     fields: {
-//         getUser: {
-//             type: new GraphQLList(UserType),
-//             args: {id:{ type: GraphQLString }},
-//             resolve(parent, args){
-//                 return useData;
-//             },
-//     },
-//   },
-// });
+
 const DateType = new GraphQLObjectType({
     name: "Date",
     fields: () => ({
@@ -62,13 +51,7 @@ const RootQuery = new GraphQLObjectType({
                 return useData;
             },
     },
-    // date:{
-    //     type: DateType,
-    //     args {id: {type: GraphQLInt}}
-    //     resolve(parent, args){
-    //         return (dates.{id: args.id});
-    //     }
-    // }
+ 
   },
 });
 
@@ -114,5 +97,5 @@ app.use('/graphql', graphqlHTTP({
 
 
 app.listen (PORT, () =>{
-    console.log('now listening to requests on port 4949');
+    console.log('now listening to requests on port 6000');
 });
